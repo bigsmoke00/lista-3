@@ -1,0 +1,7 @@
+#!/bin/bash
+
+read -p "Digite o arquivo desejado: " arquivo
+
+remocao=$(tr -s "\n" "\n"  < $arquivo)
+echo "$remocao" > $arquivo
+

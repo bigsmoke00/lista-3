@@ -1,0 +1,4 @@
+#!/bin/bash
+
+read -p 'Insira aqui um arquivo: ' arquivo
+tr -s "1234567890" 'Z' << $arquivo

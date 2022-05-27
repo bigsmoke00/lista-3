@@ -1,0 +1,20 @@
+#!/bin/bash
+
+passwdtrue=$false
+
+while $passwdtrue
+
+do
+	echo "Digite sua senha: " 
+        read -s  senha
+	echo $passwd | grep -P '(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]{5,}' &> /dev/null
+	
+	if [ "$?" -eq 0 ]
+	then
+		echo "Sua senha tem o nivel de segurança exigido"
+		passwdtrue=$true
+		break
+	else
+		echo "Sua senha e facil igual tirar doce de crinça:>"
+	fi
+done
